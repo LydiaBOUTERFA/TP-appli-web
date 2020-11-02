@@ -1,0 +1,111 @@
+﻿body {
+	background-color: rgb(24, 63, 65);
+}
+h1 {
+	text-align: center;
+	color: white;
+}
+.corps {
+	background-color : rgb(74,74,74);
+    box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 10px;
+	margin: 0 auto;
+    max-width: 700px;
+    padding: 50px;
+}
+input {
+	margin: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	width: 300px;
+	background-color: rgb(131, 172, 173);
+}
+input: hover {
+	background-color: rgb(215, 246, 247);
+}
+label {
+	margin-right: 40px;
+}
+table {
+	margin: auto;
+}
+#message {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+#date {
+	padding-right: 5px;
+}
+.white {
+	background-color: rgb(215, 246, 247);
+	padding: 20px;
+	border-radius: 10px;
+}
+#nom::placeholder {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+#prenom::placeholder {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+#date {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+#adresse::placeholder {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+#mail::placeholder {
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+#valider {
+	width: auto;
+	background: rgb(24, 63, 65);
+	color: white;
+	border: 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+#error {
+	background-color: pink;
+	padding: 5px;
+	border: 1px black solid;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+
+}
+#resultat {
+	background-color: green;
+	color: white;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+.invisible {
+	display: none;
+}
+
+.visible {
+	display: block;
+}

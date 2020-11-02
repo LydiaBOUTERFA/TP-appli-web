@@ -3,31 +3,51 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <!--<script type="text/javascript" src="formulaire.js"></script> -->
+        <!-- <script type="text/javascript" src="formulairee.js"></script> -->
+        <script type="text/javascript" src="validation.js"></script>
         <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
     </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+    <body>
+        <div class="corps">
+            <h1>Formulaire d'inscription</h1>
+            <div class="white">
+                <table>
+                    <div id="message">
+                    Tous les champs sont obligatoires
+                    </div>
+                        <br><form method="post" action="traitement.js" id="inscription" name="inscription" >
+                            <tr>
+                              
+                               <td><input type="text" name="Nom" id="nom" maxlength="20" placeholder="Nom"/></td>
+                            </tr>
+                            <tr>
+                               
+                               <td><input type="text" name="Prenom" id="prenom" maxlength="20" placeholder="Prénom"/></td>
+                            </tr>
+                            <tr>
+                               
+                               <td><input type="date" name="Date" id="date" /></td>
+                            </tr>
+                            <tr>
+                               
+                               <td><input type="text" name="Adresse" id="adresse" maxlength="50" placeholder="Adresse"/></td>
+                            </tr>
+                            <tr>
+                               
+                               <td><input type="email" name="Mail" id="mail" maxlength="30" placeholder="Adresse Mail"/></td>
+                            </tr>
+                        </form>
+                </table>
+                <input type="button" value="Valider" id="valider" onClick="validation()" />
+            </div>
+            <div id="error" class="invisible"> 
+                <p>Le formulaire n'est pas complet</p>
+            </div> 
+            <div id="resultat" class="invisible"> 
+                <p>Le formulaire est complet : envoie serveur</p>
+            </div> 
+    </div>
     </body>
 </html>
