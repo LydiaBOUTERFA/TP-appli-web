@@ -1,33 +1,116 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP3</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TP3</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- CSS boostrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+
+<body>
+  <form id="mainForm" class="needs-validation" novalidate>
+    <div class="cadre">
+      <div class="container mt-5">
+
+        <!-- ligne nom -->
+        <div class="row form-group">
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-2">
+            <label for="id_nom" class="col-form-label">Nom </label>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-6">
+            <input type="text" name="nom" class="form-control" id="id_nom" placeholder="Ex: BOUTERFA">
+          </div>
+        </div>
+
+        <!-- ligne prenom -->
+        <div class="row form-group">
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-2">
+            <label for="id_prenom" class="col-form-label">Prénom </label>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-6">
+            <input type="text" name="prenom" class="form-control" id="id_prenom" placeholder="Ex: Lydia">
+          </div>
+        </div>
+
+        <!-- ligne date de naissance -->
+        <div class="row form-group">
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-2">
+            <label for="id_date" class="col-form-label">Date de naissance </label>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-6">
+            <input type="text" name="date" class="form-control datepicker" id="id_date" placeholder="Ex: 04-09-1997">
+          </div>
+        </div>
+
+        <!-- ligne adresse postale -->
+        <div class="row form-group">
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-2">
+            <label for="id_adresse" class="col-form-label">Adresse </label>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-6">
+            <input type="text" name="adresse" class="form-control" id="id_adresse" placeholder="Ex: Paris">
+          </div>
+        </div>
+
+        <!-- ligne adresse mail -->
+        <div class="row form-group">
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-2">
+            <label for="id_mail" class="col-form-label">Mail </label>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-6">
+            <input type="text" name="mail" class="form-control" id="id_mail" placeholder="Ex: lydia@free.fr">
+          </div>
+        </div><!-- Fin div mail -->
+
+        <div class=row>
+          <div class="col col-12 col-sm-12 col-md-4 col-lg-2 offset-lg-9">
+            <button type="button" id="id_valider" class="btn btn-secondary btn-sm">Valider</button>
+          </div>
+        </div>
+      </div><!-- Fin div container -->
+    </div>
+  </form>
+
+  <!-- modal -->
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<script src="js/jquery-3.2.1.slim.min.js"></script>-->
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/form-jquery-validation.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+
+
+</body>
+
 </html>
