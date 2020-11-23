@@ -1,0 +1,52 @@
+body {
+    background-color: #4C6663;
+}
+
+input.form-control.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #a94442;
+}
+
+label.error {
+    font-size: 13px;
+    color: #a94442;
+}
+
+input.form-control.valid {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #3c763d;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.titre {
+    margin: 5%;
+}
+
+form {
+    width: 100%;
+    margin-top: 10%;
+}
+
+label {
+    font-weight: bold;
+}
+
+.cadre {
+    background-color: #E9D8D8;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -5%;
+    padding: 2%;
+    box-shadow: 4px -1px 10px 3px rgba(207, 142, 128, 0.7);
+}
+
+.compteur {
+    font-size: small;
+    color: #4c6663;
+}
