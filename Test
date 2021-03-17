@@ -1,0 +1,51 @@
+<head>
+    <style>
+        /* Use a media query to add a breakpoint at 800px: */
+    @media screen and (max-width: 500px) {
+    #mycanvas{
+    width: 100%; 
+    /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    }
+        * { padding: 0; margin: 0; }
+        canvas { background: rgb(221, 202, 202); display: block; margin: 0 auto; }
+    </style>
+</head>
+<body> 
+<canvas id="myCanvas" width="1536" height="722"></canvas>
+    <script type="text/javascript">
+        /*declaration des variables*/
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var ballRadius = 10;
+        var x = 768;
+        var y = 100;
+        var dx = 0;
+        var dy = 0.8;
+        /*declaration de la fonction drawBall pour dessiner la ball */
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius*8, 0, Math.PI*2);
+            ctx.fillStyle = 'rgb(179, 184, 190)';
+            ctx.fill();
+            ctx.closePath();
+        }
+        /*declaration de la fonction draw pour les mouvements */
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBall();
+
+            if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+            }
+            if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+                dy = -dy;
+            }
+
+            x = x + dx;
+            y = y + dy;
+        }
+
+        setInterval(draw, 10);
+    </script>
+</body>
